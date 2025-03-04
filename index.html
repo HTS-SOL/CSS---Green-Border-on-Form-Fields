@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Green Border</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .custom-green-border {
+            border: 2px solid #0D7F42 !important;
+        }
+        .custom-green-border:focus {
+            border-color: #0D7F42 !important;
+            outline: none;
+        }
+        .custom-checkbox:checked {
+            background-color: #0D7F42;
+            border-color: #0D7F42;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-10">
+    <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-6 text-gray-800">Form with Green Border</h1>
+        <form>
+            <div class="mb-4">
+                <label for="text-field" class="block text-sm font-medium text-gray-700">Text Field</label>
+                <input type="text" id="text-field" name="text-field" class="mt-1 block w-full px-3 py-2 rounded-md custom-green-border focus:ring-0">
+            </div>
+            <div class="mb-4">
+                <label for="text-area" class="block text-sm font-medium text-gray-700">Text Area</label>
+                <textarea id="text-area" name="text-area" rows="4" class="mt-1 block w-full px-3 py-2 rounded-md custom-green-border focus:ring-0"></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="checkbox" class="flex items-center">
+                    <input type="checkbox" id="checkbox" name="checkbox" class="mr-2 custom-checkbox">
+                    <span class="text-sm text-gray-700">Checkbox</span>
+                </label>
+            </div>
+            <div class="mt-6">
+                <button type="submit" class="w-full px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
